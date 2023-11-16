@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:xmachina/View/loginview.dart';
+import 'package:xmachina/view/loginview.dart';
 
 
 void main() async {
