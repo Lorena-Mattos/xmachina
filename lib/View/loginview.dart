@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:xmachina/constant/colors.dart';
 
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
@@ -25,8 +26,10 @@ class _LoginViewState extends State<LoginView> {
             padding: EdgeInsets.only(bottom: 0, left: 32, top: 0, right: 32),
           child:
             TextField(
+              style: TextStyle(color: primaryColor),
               decoration: InputDecoration(
-                icon: ImageIcon(AssetImage('assets/icons/envelope.png')),
+                icon: ImageIcon(AssetImage('assets/icons/envelope.png'), 
+                color: primaryColor,),  
                 hintText: 'E-mail'
                 ),
             ), // Added closing parenthesis here
