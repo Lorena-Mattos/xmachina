@@ -38,6 +38,7 @@ class _LoginViewState extends State<LoginView> {
             padding: EdgeInsets.only(bottom: 0, left: 32, top: 0, right: 32),
           child:
             TextField(
+              obscureText: true,
               style: TextStyle(color: primaryColor),
               decoration: InputDecoration(
                 icon: ImageIcon(AssetImage('assets/icons/key.png'), 
