@@ -22,7 +22,7 @@ class _LoginViewState extends State<LoginView> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset("assets/images/logo.png"),
-          const Padding(
+           const Padding(
             padding: EdgeInsets.only(bottom: 0, left: 32, top: 0, right: 32),
           child:
             TextField(
@@ -34,12 +34,13 @@ class _LoginViewState extends State<LoginView> {
                 ),
             ), // Added closing parenthesis here
           ),
-        const Padding(
+         const Padding(
             padding: EdgeInsets.only(bottom: 0, left: 32, top: 0, right: 32),
           child:
             TextField(
+              style: TextStyle(color: primaryColor),
               decoration: InputDecoration(
-                icon: ImageIcon(AssetImage('assets/icons/key.png')),
+                icon: ImageIcon(AssetImage('assets/icons/key.png'), color: primaryColor,),
                 hintText: 'Senha'
                 ),
             ), // Added closing parenthesis here
