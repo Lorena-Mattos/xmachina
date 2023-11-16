@@ -16,11 +16,11 @@ class _LoginViewState extends State<LoginView> {
       body: SizedBox(
       height: size.height,
       width: size.width,
-      child: const Column(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text("Login")
+          Image.asset('assets/images/logo.png'),
           ],
         ),
       ),
