@@ -47,6 +47,10 @@ class _LoginViewState extends State<LoginView> {
                 ),
             ), // Added closing parenthesis here
           ),
+          TextButton(
+            onPressed: () {}, 
+            child: const Text('Login')
+            ),
         ],
       ),
       ),
