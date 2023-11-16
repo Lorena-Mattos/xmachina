@@ -31,10 +31,21 @@ class _LoginViewState extends State<LoginView> {
                 ),
             ), // Added closing parenthesis here
           ),
+        const Padding(
+            padding: EdgeInsets.only(bottom: 0, left: 32, top: 0, right: 32),
+          child:
+            TextField(
+              decoration: InputDecoration(
+                icon: ImageIcon(AssetImage('assets/icons/key.png')),
+                hintText: 'Senha'
+                ),
+            ), // Added closing parenthesis here
+          ),
         ],
       ),
       ),
     );
   }
+  
   
 }
