@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:xmachina/View/loginview.dart';
 
-void main() {
+
+void main() async {
+  await dotenv.load(fileName: ".env");
   runApp(const MyApp());
 }
 
@@ -11,13 +15,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Meu primeiro aplicativo',
+      title: 'Flutter Demo',
       theme: ThemeData(
-        
+      
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Meu primeiro aplicativo'),
+      home: const LoginView(),
     );
   }
 }
@@ -25,7 +29,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
- 
 
   final String title;
 
@@ -34,73 +37,24 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  var _counter = 0;
-  List<int> numeros = [1,2,3,4,5,6];
-  String selectedPage = '';
+  String _counter = '0';
 
   void _incrementCounter() {
     setState(() {
-      
-      _counter++;
+
+    _counter=dotenv.env['API_BASE_URL']!;
     });
   }
-  
 
   @override
   Widget build(BuildContext context) {
-    
+   
     return Scaffold(
       appBar: AppBar(
         
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        
+
         title: Text(widget.title),
-      ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            const DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.deepPurple,
-              ),
-              child: Text(
-                'Menu',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
-                ),
-              ),
-            ),
-            ListTile(
-              leading: const Icon(Icons.message),
-              title: const Text('Mensagens'),
-              onTap: () {
-                setState(() {
-                  selectedPage = 'Mensagens';
-                });
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.account_circle),
-              title: const Text('Perfil'),
-              onTap: () {
-                setState(() {
-                  selectedPage = 'Perfil';
-                });
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.settings),
-              title: const Text('Configurações'),
-              onTap: () {
-                setState(() {
-                  selectedPage = 'Configurações';
-                });
-              },
-            ),
-          ],
-        ),
       ),
       body: Center(
         
@@ -109,16 +63,12 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'Você clicou nesse botão essa quantidade de vezes:',
-              style: TextStyle(color: Colors.red),
+              'You have pushed the button this many times:',
             ),
             Text(
-              '$_counter vezes',
+               'teste $_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
-            Column(
-              children: numeros.map((e) => Text('Número $e')).toList(),
-            )
           ],
         ),
       ),
@@ -126,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ), 
     );
   }
 }
