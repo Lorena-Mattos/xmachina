@@ -40,7 +40,8 @@ class _LoginViewState extends State<LoginView> {
             TextField(
               style: TextStyle(color: primaryColor),
               decoration: InputDecoration(
-                icon: ImageIcon(AssetImage('assets/icons/key.png'), color: primaryColor,),
+                icon: ImageIcon(AssetImage('assets/icons/key.png'), 
+                color: primaryColor,),
                 hintText: 'Senha'
                 ),
             ), // Added closing parenthesis here
