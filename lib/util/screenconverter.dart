@@ -9,3 +9,9 @@ double convertHeight(double height, double screenHeight) {
   
 }
 
+double convertWidth(double width, double screenWidth) {
+  double percent = ((width * 100) / height_figma) / 100;
+  return screenWidth * percent;
+  
+}
+
