@@ -49,6 +49,11 @@ class _LoginViewState extends State<LoginView> {
           ),
           TextButton(
             onPressed: () {}, 
+            style: TextButton.styleFrom(
+              foregroundColor: Colors.white
+              
+
+            ),
             child: const Text('Login')
             ),
         ],
