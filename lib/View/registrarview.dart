@@ -31,7 +31,7 @@ class _RegistrarViewState extends State<RegistrarView> {
               left: 0, 
               top: convertHeight(133, size.height), 
               right: 0),
-              child: Image.asset("assets/images/Avatar_Foto.png")
+              child: Image.asset("assets/images/Avatar.png")
           ),
              Padding(
             padding: EdgeInsets.only(bottom: 0, 
