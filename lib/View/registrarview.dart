@@ -28,11 +28,19 @@ class _RegistrarViewState extends State<RegistrarView> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Padding(
-              padding: EdgeInsets.only(bottom: 0, 
-              left: 0, 
-              top: convertHeight(40, size.height), 
-              right: 0),
-              child: Image.asset("assets/images/Avatar.png")
+              padding: EdgeInsets.only(bottom: 0, left: 0, top: convertHeight(40, size.height), right: 0),
+              child: SizedBox(
+                child: Stack(
+                  children: [
+                    Image.asset("assets/images/Avatar.png"),
+                    Positioned(
+                      top: convertHeight(65, size.height),
+                      left: convertHeight(65, size.height),
+                      child: Image.asset("assets/icons/Camera.png")
+                      )
+                  ],
+                )
+                )
           ),
              Padding(
             padding: EdgeInsets.only(bottom: 0, 
