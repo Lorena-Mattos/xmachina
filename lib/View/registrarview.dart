@@ -5,6 +5,7 @@ import 'package:xmachina/constant/colors.dart';
 import 'package:xmachina/util/screenconverter.dart';
 
 import '../component/customtextfiel.dart';
+import 'loginview.dart';
 
 class RegistrarView extends StatefulWidget {
   const RegistrarView({super.key});
@@ -29,14 +30,14 @@ class _RegistrarViewState extends State<RegistrarView> {
           Padding(
               padding: EdgeInsets.only(bottom: 0, 
               left: 0, 
-              top: convertHeight(133, size.height), 
+              top: convertHeight(40, size.height), 
               right: 0),
               child: Image.asset("assets/images/Avatar.png")
           ),
              Padding(
             padding: EdgeInsets.only(bottom: 0, 
             left: convertWidth(32, size.width), 
-            top: convertHeight(56, size.height), 
+            top: convertHeight(48, size.height), 
             right: convertWidth(32, size.width)),
             child:
               const CustomTextField(
@@ -107,12 +108,19 @@ class _RegistrarViewState extends State<RegistrarView> {
         left: 0, 
         top: convertHeight(24, size.height), 
         right: 0),
-        child: const Text('Não possui conta?', style: TextStyle(fontSize: 14, 
+        child: const Text('Já possui uma conta?', style: TextStyle(fontSize: 14, 
         fontWeight: FontWeight.w400, color: grayColor),),
         ),
-          const Text('Faça o cadastro agora', style: TextStyle(fontSize: 14, 
+          InkWell(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(
+                  builder: (context) => const LoginView()
+              ));
+            },
+            child: const Text('Faça o seu login agora', style: TextStyle(fontSize: 14,
         fontWeight: FontWeight.bold, color: primaryColor,
-        decoration: TextDecoration.underline),)
+        decoration: TextDecoration.underline),),
+          )
         ],
       ),
       ),
