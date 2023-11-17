@@ -38,11 +38,11 @@ class _LoginViewState extends State<LoginView> {
             left: convertWidth(32, size.width), 
             top: convertHeight(56, size.height), 
             right: convertWidth(32, size.width)),
-          child:
-            const CustomTextField(
-              textHint: 'E-mail',
-              iconPath: 'assets/icons/envelope.png',
-            ), // Added closing parenthesis here
+            child:
+              const CustomTextField(
+                textHint: 'E-mail',
+                iconPath: 'assets/icons/envelope.png',
+              ), // Added closing parenthesis here
           ),
           const Padding(
             padding: EdgeInsets.only(bottom: 0, left: 32, top: 10, right: 32),
