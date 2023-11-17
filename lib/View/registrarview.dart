@@ -6,14 +6,14 @@ import 'package:xmachina/util/screenconverter.dart';
 
 import '../component/customtextfiel.dart';
 
-class LoginView extends StatefulWidget {
-  const LoginView({super.key});
+class RegistrarView extends StatefulWidget {
+  const RegistrarView({super.key});
 
   @override
-  State<LoginView> createState() => _LoginViewState();
+  State<RegistrarView> createState() => _RegistrarViewState();
 }
 
-class _LoginViewState extends State<LoginView> {
+class _RegistrarViewState extends State<RegistrarView> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
