@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:xmachina/constant/colors.dart';
 
@@ -23,7 +25,7 @@ class _LoginViewState extends State<LoginView> {
         children: [
           Image.asset("assets/images/logo.png"),
            const Padding(
-            padding: EdgeInsets.only(bottom: 0, left: 32, top: 0, right: 32),
+            padding: EdgeInsets.only(bottom: 0, left: 32, top: 56, right: 32),
           child:
             TextField(
               style: TextStyle(color: primaryColor),
@@ -47,15 +49,27 @@ class _LoginViewState extends State<LoginView> {
                 ),
             ), // Added closing parenthesis here
           ),
-          TextButton(
-            onPressed: () {}, 
-            style: TextButton.styleFrom(
-              foregroundColor: Colors.white
-              
+          Padding(
+            padding: const EdgeInsets.only(bottom: 0, left: 32, top: 40, right: 32),
+            child: TextButton(
+                onPressed: () {},
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.white,
+                backgroundColor: primaryColor,
+                minimumSize: Size(size.width, 48)
 
-            ),
-            child: const Text('Login')
-            ),
+              ),
+              child: const Text('Login')
+              ),
+          ),
+        const Padding(
+        padding: EdgeInsets.only(bottom: 0, left: 0, top: 24, right: 0),
+        child: Text('Não possui conta?', style: TextStyle(fontSize: 14, 
+        fontWeight: FontWeight.w400, color: grayColor),),
+        ),
+          const Text('Faça o cadastro agora', style: TextStyle(fontSize: 14, 
+        fontWeight: FontWeight.bold, color: primaryColor,
+        decoration: TextDecoration.underline),)
         ],
       ),
       ),
