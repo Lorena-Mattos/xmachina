@@ -27,8 +27,10 @@ class _LoginViewState extends State<LoginView> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Padding(
-              padding: EdgeInsets.only(bottom: 0, left: 0, top:
-              convertHeight(133, size.height), right: 0),
+              padding: EdgeInsets.only(bottom: 0, 
+              left: 0, 
+              top: convertHeight(133, size.height), 
+              right: 0),
               child: Image.asset("assets/images/logo.png")
           ),
              Padding(
