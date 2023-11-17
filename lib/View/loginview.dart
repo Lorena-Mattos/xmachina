@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:xmachina/constant/colors.dart';
+import 'package:xmachina/util/screenconverter.dart';
 
 import '../component/customtextfiel.dart';
 
@@ -23,10 +24,14 @@ class _LoginViewState extends State<LoginView> {
       width: size.width,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Image.asset("assets/images/logo.png"),
-            const Padding(
+          Padding(
+              padding: EdgeInsets.only(bottom: 0, left: 0, top:
+              convertHeight(133, size.height), right: 0),
+              child: Image.asset("assets/images/logo.png")
+          ),
+             const Padding(
             padding: EdgeInsets.only(bottom: 0, left: 32, top: 56, right: 32),
           child:
             CustomTextField(
