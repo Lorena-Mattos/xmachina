@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:xmachina/constant/colors.dart';
 
+import '../component/customtextfiel.dart';
+
 class LoginView extends StatefulWidget {
   const LoginView({super.key});
 
@@ -24,43 +26,21 @@ class _LoginViewState extends State<LoginView> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset("assets/images/logo.png"),
-            Padding(
-            padding: const EdgeInsets.only(bottom: 0, left: 32, top: 56, right: 32),
+            const Padding(
+            padding: EdgeInsets.only(bottom: 0, left: 32, top: 56, right: 32),
           child:
-            ConstrainedBox(
-              constraints: BoxConstraints(
-                minWidth: size.width,
-                maxWidth: size.width,
-                maxHeight: 40,
-                minHeight: 40
-              ),
-              child: const DecoratedBox(
-                decoration: BoxDecoration(
-                  border: Border(bottom: BorderSide(width: 1, color: primaryColor))
-                ),
-                child: TextField(
-                  style: TextStyle(color: primaryColor),
-                  decoration: InputDecoration(
-                    icon: ImageIcon(AssetImage('assets/icons/envelope.png'),
-                    color: primaryColor,),
-                    hintText: 'E-mail',
-                    border: InputBorder.none
-                    ),
-                ),
-              ),
+            CustomTextField(
+              textHint: 'E-mail',
+              iconPath: 'assets/icons/envelope.png',
             ), // Added closing parenthesis here
           ),
-         const Padding(
-            padding: EdgeInsets.only(bottom: 0, left: 32, top: 0, right: 32),
+          const Padding(
+            padding: EdgeInsets.only(bottom: 0, left: 32, top: 10, right: 32),
           child:
-            TextField(
+            CustomTextField(
+              textHint: 'Senha',
+              iconPath: 'assets/icons/key.png',
               obscureText: true,
-              style: TextStyle(color: primaryColor),
-              decoration: InputDecoration(
-                icon: ImageIcon(AssetImage('assets/icons/key.png'), 
-                color: primaryColor,),
-                hintText: 'Senha'
-                ),
             ), // Added closing parenthesis here
           ),
           Padding(
@@ -92,3 +72,4 @@ class _LoginViewState extends State<LoginView> {
   
   
 }
+
