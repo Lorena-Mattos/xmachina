@@ -24,16 +24,30 @@ class _LoginViewState extends State<LoginView> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset("assets/images/logo.png"),
-           const Padding(
-            padding: EdgeInsets.only(bottom: 0, left: 32, top: 56, right: 32),
+            Padding(
+            padding: const EdgeInsets.only(bottom: 0, left: 32, top: 56, right: 32),
           child:
-            TextField(
-              style: TextStyle(color: primaryColor),
-              decoration: InputDecoration(
-                icon: ImageIcon(AssetImage('assets/icons/envelope.png'), 
-                color: primaryColor,),  
-                hintText: 'E-mail'
+            ConstrainedBox(
+              constraints: BoxConstraints(
+                minWidth: size.width,
+                maxWidth: size.width,
+                maxHeight: 40,
+                minHeight: 40
+              ),
+              child: const DecoratedBox(
+                decoration: BoxDecoration(
+                  border: Border(bottom: BorderSide(width: 1, color: primaryColor))
                 ),
+                child: TextField(
+                  style: TextStyle(color: primaryColor),
+                  decoration: InputDecoration(
+                    icon: ImageIcon(AssetImage('assets/icons/envelope.png'),
+                    color: primaryColor,),
+                    hintText: 'E-mail',
+                    border: InputBorder.none
+                    ),
+                ),
+              ),
             ), // Added closing parenthesis here
           ),
          const Padding(
