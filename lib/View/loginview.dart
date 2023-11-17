@@ -31,10 +31,13 @@ class _LoginViewState extends State<LoginView> {
               convertHeight(133, size.height), right: 0),
               child: Image.asset("assets/images/logo.png")
           ),
-             const Padding(
-            padding: EdgeInsets.only(bottom: 0, left: 32, top: 56, right: 32),
+             Padding(
+            padding: EdgeInsets.only(bottom: 0, 
+            left: convertWidth(32, size.width), 
+            top: convertHeight(56, size.height), 
+            right: convertWidth(32, size.width)),
           child:
-            CustomTextField(
+            const CustomTextField(
               textHint: 'E-mail',
               iconPath: 'assets/icons/envelope.png',
             ), // Added closing parenthesis here
