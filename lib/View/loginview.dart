@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:xmachina/constant/colors.dart';
 import 'package:xmachina/util/screenconverter.dart';
+import 'package:xmachina/view/registrarview.dart';
 
 import '../component/customtextfiel.dart';
 
@@ -86,9 +87,18 @@ class _LoginViewState extends State<LoginView> {
         child: const Text('Não possui conta?', style: TextStyle(fontSize: 14, 
         fontWeight: FontWeight.w400, color: grayColor),),
         ),
-          const Text('Faça o cadastro agora', style: TextStyle(fontSize: 14, 
+          InkWell(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(
+                  builder: (context) => const RegistrarView()
+              ));
+            },
+            child: const Text('Faça o cadastro agora',
+            style: TextStyle(
+              fontSize: 14,
         fontWeight: FontWeight.bold, color: primaryColor,
-        decoration: TextDecoration.underline),)
+        decoration: TextDecoration.underline),),
+          )
         ],
       ),
       ),
