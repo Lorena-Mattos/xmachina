@@ -44,31 +44,42 @@ class _LoginViewState extends State<LoginView> {
                 iconPath: 'assets/icons/envelope.png',
               ), // Added closing parenthesis here
           ),
-          const Padding(
-            padding: EdgeInsets.only(bottom: 0, left: 32, top: 10, right: 32),
-          child:
-            CustomTextField(
-              textHint: 'Senha',
-              iconPath: 'assets/icons/key.png',
-              obscureText: true,
-            ), // Added closing parenthesis here
+          Padding(
+            padding: EdgeInsets.only(bottom: 0, 
+            left: convertWidth(32, size.width), 
+            top: convertHeight(24, size.height),
+            right: convertWidth(32, size.width)
+            ),
+            child:
+              const CustomTextField(
+                textHint: 'Senha',
+                iconPath: 'assets/icons/key.png',
+                obscureText: true,
+              ), // Added closing parenthesis here
           ),
           Padding(
-            padding: const EdgeInsets.only(bottom: 0, left: 32, top: 40, right: 32),
+            padding: EdgeInsets.only(bottom: 0, 
+            left: convertWidth(32, size.width), 
+            top: convertHeight(40, size.height), 
+            right: convertWidth(32, size.width),
+            ),
             child: TextButton(
                 onPressed: () {},
               style: TextButton.styleFrom(
                 foregroundColor: Colors.white,
                 backgroundColor: primaryColor,
-                minimumSize: Size(size.width, 48)
+                minimumSize: Size(size.width, convertHeight(48, size.height))
 
               ),
               child: const Text('Login')
               ),
           ),
-        const Padding(
-        padding: EdgeInsets.only(bottom: 0, left: 0, top: 24, right: 0),
-        child: Text('Não possui conta?', style: TextStyle(fontSize: 14, 
+        Padding(
+        padding: EdgeInsets.only(bottom: 0, 
+        left: 0, 
+        top: convertHeight(24, size.height), 
+        right: 0),
+        child: const Text('Não possui conta?', style: TextStyle(fontSize: 14, 
         fontWeight: FontWeight.w400, color: grayColor),),
         ),
           const Text('Faça o cadastro agora', style: TextStyle(fontSize: 14, 
