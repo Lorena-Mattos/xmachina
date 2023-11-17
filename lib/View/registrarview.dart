@@ -99,7 +99,7 @@ class _RegistrarViewState extends State<RegistrarView> {
                 minimumSize: Size(size.width, convertHeight(48, size.height))
 
               ),
-              child: const Text('Login')
+              child: const Text('Cadastrar')
               ),
           ),
         Padding(
