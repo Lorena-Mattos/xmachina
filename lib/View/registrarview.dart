@@ -31,12 +31,23 @@ class _RegistrarViewState extends State<RegistrarView> {
               left: 0, 
               top: convertHeight(133, size.height), 
               right: 0),
-              child: Image.asset("assets/images/logo.png")
+              child: Image.asset("assets/images/Avatar_Foto.png")
           ),
              Padding(
             padding: EdgeInsets.only(bottom: 0, 
             left: convertWidth(32, size.width), 
             top: convertHeight(56, size.height), 
+            right: convertWidth(32, size.width)),
+            child:
+              const CustomTextField(
+                textHint: 'Nome Completo',
+                iconPath: 'assets/icons/user.png',
+              ), // Added closing parenthesis here
+          ),
+          Padding(
+            padding: EdgeInsets.only(bottom: 0, 
+            left: convertWidth(32, size.width), 
+            top: convertHeight(24, size.height), 
             right: convertWidth(32, size.width)),
             child:
               const CustomTextField(
@@ -53,6 +64,19 @@ class _RegistrarViewState extends State<RegistrarView> {
             child:
               const CustomTextField(
                 textHint: 'Senha',
+                iconPath: 'assets/icons/key.png',
+                obscureText: true,
+              ), // Added closing parenthesis here
+          ),
+          Padding(
+            padding: EdgeInsets.only(bottom: 0, 
+            left: convertWidth(32, size.width), 
+            top: convertHeight(24, size.height),
+            right: convertWidth(32, size.width)
+            ),
+            child:
+              const CustomTextField(
+                textHint: 'Confirmar Senha',
                 iconPath: 'assets/icons/key.png',
                 obscureText: true,
               ), // Added closing parenthesis here
