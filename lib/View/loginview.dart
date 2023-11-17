@@ -66,6 +66,10 @@ class _LoginViewState extends State<LoginView> {
             child: TextButton(
                 onPressed: () {},
               style: TextButton.styleFrom(
+                textStyle: TextStyle(
+                  fontSize: convertHeight(16, size.height), 
+                fontWeight: FontWeight.w600
+                ),
                 foregroundColor: Colors.white,
                 backgroundColor: primaryColor,
                 minimumSize: Size(size.width, convertHeight(48, size.height))
